@@ -1,0 +1,17 @@
+syntax = "proto3";
+package ua.markiyan;
+
+option java_multiple_files = true;
+
+service TrackService {
+  rpc GetTrackInfo (TrackRequest) returns (TrackResponse);
+}
+
+message TrackRequest {
+  string id = 1;
+}
+
+message TrackResponse {
+  string title = 1;
+  string description = 2;
+}
